@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c "$C_FILE" -o "$OUTPUT_FILE"
+gcc -c "$c" -o "$main.o"
