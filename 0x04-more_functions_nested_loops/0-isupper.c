@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdio.h>
+
 /* File: 0-isupper.c */
 
 /**
