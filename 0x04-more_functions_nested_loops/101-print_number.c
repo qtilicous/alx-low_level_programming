@@ -4,20 +4,35 @@
  * print_number - Prints an integer.
  * @n: The integer to be printed.
  */
-
 void print_number(int n)
 {
+	int reverse = 0;
+	int num = n;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
 	}
 
-	if (n / 10 != 0)
+	if (num == 0)
 	{
-		print_number(n / 10);
+		_putchar('0');
+		return;
 	}
 
-	_putchar((n % 10) + '0');
+    /* Reverse the number */
+	while (num != 0)
+	{
+		reverse = reverse * 10 + (num % 10);
+		num /= 10;
+	}
+
+    /* Print the reversed number */
+	while (reverse != 0)
+	{
+		_putchar((reverse % 10) + '0');
+		reverse /= 10;
+	}
 }
 
