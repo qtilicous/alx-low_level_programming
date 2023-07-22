@@ -1,38 +1,23 @@
 #include "main.h"
 
 /**
- * print_number - Prints an integer.
+ * print_number - Function to print an integer recursively.
  * @n: The integer to be printed.
  */
+
 void print_number(int n)
 {
-	int reverse = 0;
-	int num = n;
-
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -n;
+		n = -n;
 	}
 
-	if (num == 0)
+	if (n / 10 != 0)
 	{
-		_putchar('0');
-		return;
+		print_number(n / 10);
 	}
 
-    /* Reverse the number */
-	while (num != 0)
-	{
-		reverse = reverse * 10 + (num % 10);
-		num /= 10;
-	}
-
-    /* Print the reversed number */
-	while (reverse != 0)
-	{
-		_putchar((reverse % 10) + '0');
-		reverse /= 10;
-	}
+	_putchar(n % 10 + '0');
 }
 
