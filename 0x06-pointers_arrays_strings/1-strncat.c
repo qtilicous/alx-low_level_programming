@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _strncat - Concatenates two strings up to n bytes from src.
  * @dest: The destination string to append to.
