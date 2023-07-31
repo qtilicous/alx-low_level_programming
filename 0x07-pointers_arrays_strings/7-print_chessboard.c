@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/*
- * print_chessboards - entry point
- * @a: array
- * Return: Always 0 (Success)
+/**
+ * print_chessboard - Prints the chessboard.
+ * @a: A 2D array representing the chessboard.
+ *
+ * This function prints the chessboard to the standard output.
  */
-
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
