@@ -18,10 +18,15 @@ void print_name(char *name, void (*f)(char *))
 }
 
 /* Function to print a string using custom putchar function */
-void custom_putchar(char c);
+void _putchar(char c);
 
-/* Custom implementation of putchar */
-void custom_putchar(char c)
+/**
+ * _putchar - writes character to stdout
+ * @c: character to print
+ * Retun: on success 1
+ * Onerror: -1 is returned
+ */
+void _putchar(char c)
 {
 	write(1, &c, 1);
 }
