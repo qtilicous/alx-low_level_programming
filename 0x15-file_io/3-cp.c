@@ -36,8 +36,8 @@ void close_file(int fd, const char *filename)
 {
 	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %d\n", fd);
-		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %s\n", filename);
 		exit(100);
 	}
 }
@@ -57,14 +57,14 @@ void copy_file(int s_fd, int d_fd)
 		wr_status = write(d_fd, buffer, rd_status);
 		if (wr_status == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file descriptor %d\n", d_fd);
+			dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %d\n", d_fd);
 			exit(99);
 		}
 	}
 
 	if (rd_status == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file descriptor %d\n", s_fd);
+		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %d\n", s_fd);
 		exit(98);
 	}
 }
