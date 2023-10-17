@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stddef.h>
 
 /**
  * _strcat - concatenates two stings
@@ -6,7 +6,7 @@
  * @src: the string to be concatenated
  * Return: a pointer to the destination string @dest
  */
-int *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	char *dest_start = dest;
 

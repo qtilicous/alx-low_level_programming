@@ -10,7 +10,7 @@ char *_strcpy(char *dest, char *src)
 {
 	char *dest_start = dest;
 
-	while (src != '\0')
+	while (*src != '\0')
 	{
 		*dest = *src;
 
@@ -18,7 +18,7 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 
-	*dest = '\0' /* add null terminator to the string */
+	*dest = '\0';
 
 	return (dest_start);
 }
